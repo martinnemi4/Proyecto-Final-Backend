@@ -1,0 +1,46 @@
+<div>
+    <div class="container">
+        <div class="profileCard rounded">
+            <div class="row">
+                <div class="col">
+                    <img class="rounded-circle" alt="avatar2" src="{{user.avatar}}"/>
+                </div>
+                <div class="col">
+                    <div class="leftCol"> 
+                        <div>
+                            <h2 class="profileHeading">
+                                <strong>{{user.firstName}} {{user.lastName}}</strong>
+                            </h2>
+                            <p class="profileDescription">
+                                email: {{user.email}}
+                                <br>
+                                rol: {{user.role}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{#if events}}
+    <h5 class="profile">Historial de actividades</h5>
+    
+    <ul>
+        <strong>
+            {{#each events}}
+            <li>
+                <div>
+                    <p>{{this.event}}</p>
+                    <p>{{this.description}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </strong>
+    </ul>
+    {{else}}
+    <h3 class="notactivity">No haz realizado ninguna compra!</h3>
+    {{/if}}
+</div>
+</div>
+
+<link rel="stylesheet" href="/css/profile.css">

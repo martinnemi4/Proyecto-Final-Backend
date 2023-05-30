@@ -1,0 +1,111 @@
+h4{
+    text-align: right;
+    margin-right: 5%;
+}
+
+h5{
+    text-align: center;
+    margin-top: 10%;
+}
+.cardCart{
+    width: 800px;
+    height: 204px;
+    margin-left:20%;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(190, 190, 190),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.divisor{
+    margin-top: 10%;
+    width: 75%;
+    margin-left: 10%;
+}
+
+h3{
+    text-align: center;
+}
+.pay{
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+.form-check{
+    margin-bottom: 2.5%;
+}
+
+.paymethod{
+    margin-top: -2%;
+    width: 13%;
+    height: 13%;
+}
+
+.paymethod2{
+    margin-top:1%;
+    width: 13%;
+    height: 13%;
+}
+
+.paymethod3{
+    width: 7%;
+    height: 7%;
+}
+
+.paymethod4{
+    width: 20%;
+    height: 20%;
+}
+
+.imagenCart{
+    width:50%;
+    height:90%;
+    margin-top: 1%;
+    margin-left:20%;
+}
+
+p{
+    margin-top: 5%;
+}
+
+.btn-group{
+    margin-left: 28%;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+
+.button {
+    padding: 1.3em 3em;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 43%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.button:hover {
+    background-color: #715AFF;
+    box-shadow: 0px 15px 20px #595CFF;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}

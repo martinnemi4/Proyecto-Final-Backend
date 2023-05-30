@@ -1,0 +1,81 @@
+<div>
+    <h1>{{user.firstName}}, Este es tu carrito de compras</h1>
+    {{#if products}}
+    <br>
+    <h4>Precio total: ${{this.totalPrice}}</h4>
+    {{#each products}}
+    <div class="cardCart shadow">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{{this.thumbnail}}" alt="" class="imagenCart">
+                </div>
+                <div class="col">
+                    <p>{{this.title}} x {{this.quantify}}</p>
+                    <p>${{this.price}}</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {{/each}} 
+    <hr class="divisor">
+    <h3>Elegi tu metodo de pago</h3>
+    <div class="pay" aria-required="true">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                <img src="paypal.png" class="paymethod" alt="" srcset="">
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                <img src="amazon.png" class="paymethod2" alt="" srcset="">
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+            <label class="form-check-label" for="flexRadioDefault3">
+                <img src="visa.png" class="paymethod3" alt="" srcset="">
+                <i></i>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+            <label class="form-check-label" for="flexRadioDefault4">
+                <img src="mastercard.png" class="paymethod4" alt="" srcset=""> 
+                <i></i>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+            <label class="form-check-label" for="flexRadioDefault5">
+                <img src="mercadopago.png" class="paymethod" alt="" srcset="">
+            </label>
+        </div>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button class="button" id="purchaseButton">
+            <a href="/api/carts/purchase/">
+                <strong>
+                    Finalizar Compra!
+                </strong>
+            </a>
+        </button>
+        <button class="button">
+            <a href="/products">Volver a la tienda!</a>
+        </button>    
+    </div>
+    {{else}}
+    <h5>No hay productos en tu carrito!</h5>
+    <a href="/products">
+        <button class="button">
+            Ir a la tienda!
+        </button>
+    </a>
+    {{/if}}
+</div>
+
+<link rel="stylesheet" href="/css/cart.css">
